@@ -32,10 +32,10 @@ class Webpacker::DevServer
 
   def https?
     case fetch(:https)
-    when true, "true"
-      true
-    else
+    when false, "false"
       false
+    else
+      true
     end
   end
 
